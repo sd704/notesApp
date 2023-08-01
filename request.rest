@@ -1,0 +1,31 @@
+POST http://127.0.0.1:3000/createuser
+Content-Type: application/json
+
+{
+    "name": "James Doe",
+    "email": "james.doe@example.com",
+    "password": "securepassword123"
+}
+
+###
+
+POST http://127.0.0.1:3000/user
+Content-Type: application/json
+
+{
+    "email": "james.doe@example.com",
+    "password": "securepassword123"
+}
+
+###
+
+PUT http://127.0.0.1:3000/updateuser
+Content-Type: application/json
+
+{
+    "oldEmail": "james.doe@example.com",
+    "oldPassword": "securepassword123",
+    "newName": "James Doe",
+    "newEmail": "james.doe@gmail.com",
+    "newpassword": "securepassword987"
+}
