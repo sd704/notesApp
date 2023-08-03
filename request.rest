@@ -1,45 +1,35 @@
-GET http://127.0.0.1:3000/users
-Content-Type: application/json
-
-{}
+GET http://127.0.0.1:3000/user/64ca52f7fc78d2fc0bfab9ea/note
 
 ###
 
-POST http://127.0.0.1:3000/user
+GET http://127.0.0.1:3000/user/64ca52f7fc78d2fc0bfab9ea/note/64ca52f7fc78d2fc0bfab9e9
+
+###
+
+POST http://127.0.0.1:3000/user/64ca52f7fc78d2fc0bfab9ea/note/
 Content-Type: application/json
 
 {
-    "name": "Dexter",
-    "email": "dexter@google.co",
-    "password": "dexter8712"
-} 
-
-###
-
-GET http://127.0.0.1:3000/user/64ca52f7fc78d2fc0bfab9ea
-Content-Type: application/json
-
-{}
-
-###
-
-PUT http://127.0.0.1:3000/user/64ca52f7fc78d2fc0bfab9ea
-Content-Type: application/json
-
-{
-    "name": "Dexter Junior",
-    "email": "dexter@google.co",
+    "title": "Office Work",
+    "text": "Submit report to manager",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNhNTJmN2ZjNzhkMmZjMGJmYWI5ZWEiLCJpYXQiOjE2OTA5ODExMTJ9.qvtWE2u4RfQ4sc9ix6LVugSBTF8l_UqaKjHOCu24hJI"
 }
 
 ###
 
-POST http://127.0.0.1:3000/validateuser
+PUT http://127.0.0.1:3000/user/64ca52f7fc78d2fc0bfab9ea/note/64ca52f7fc78d2fc0bfab9e9
 Content-Type: application/json
 
 {
-    "email": "dexter@google.co",
-    "password": "dexter8712"
+    "completed": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNhNTJmN2ZjNzhkMmZjMGJmYWI5ZWEiLCJpYXQiOjE2OTA5ODExMTJ9.qvtWE2u4RfQ4sc9ix6LVugSBTF8l_UqaKjHOCu24hJI"
 }
- 
+
 ###
+
+DELETE  http://127.0.0.1:3000/user/64ca52f7fc78d2fc0bfab9ea/note/64cba094b6fbc899a4a44b94
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNhNTJmN2ZjNzhkMmZjMGJmYWI5ZWEiLCJpYXQiOjE2OTA5ODExMTJ9.qvtWE2u4RfQ4sc9ix6LVugSBTF8l_UqaKjHOCu24hJI"
+}

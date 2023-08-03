@@ -7,7 +7,7 @@ const { Note } = require('../models/Note')
 
 
 // Get all users
-router.get('/users', async (req, res) => {
+router.get('/user', async (req, res) => {
     try {
         const users = await User.find({}, 'name email').exec();
         res.json({
